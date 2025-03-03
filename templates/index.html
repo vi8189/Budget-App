@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1e40af;
+            --secondary-color: #3b82f6;
+            --accent-color: #f97316;
+            --positive-color: #22c55e;
+            --negative-color: #ef4444;
+            --light-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .header-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 1rem 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -0.5px;
+            color: white;
+        }
+        
+        .page-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 0.5rem;
+        }
+        
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-card:nth-child(1) {
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .feature-card:nth-child(2) {
+            border-left: 4px solid var(--positive-color);
+        }
+        
+        .feature-card:nth-child(3) {
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .feature-card.analysis-card {
+            border-left: 4px solid var(--accent-color);
+        }
+        
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:nth-child(1) .icon-wrapper {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--secondary-color);
+        }
+        
+        .feature-card:nth-child(2) .icon-wrapper {
+            background-color: rgba(34, 197, 94, 0.1);
+            color: var(--positive-color);
+        }
+        
+        .feature-card:nth-child(3) .icon-wrapper {
+            background-color: rgba(249, 115, 22, 0.1);
+            color: var(--accent-color);
+        }
+
+        .feature-card.analysis-card .icon-wrapper {
+            background-color: rgba(249, 115, 22, 0.1);
+            color: var(--accent-color);
+        }
+        
+        .icon-wrapper i {
+            font-size: 2rem;
+        }
+        
+        .content-wrapper {
+            text-align: center;
+        }
+        
+        .title {
+            color: var(--text-dark);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .description {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .card-container {
+                gap: 1rem;
+            }
+            
+            .feature-card {
+                padding: 1.5rem;
+                height: auto;
+                min-height: 240px;
+            }
+            
+            .icon-wrapper {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .icon-wrapper i {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <div class="container">
+            <h1><i class="fas fa-wallet me-2"></i>Budget Tracker</h1>
+            <p class="page-subtitle">Manage your finances with ease</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card-container">
+            <a href="{{ url_for('budget') }}" class="feature-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-money-bill-wave"></i>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Budget Plan</h3>
+                    <p class="description">Create and manage your budget allocations across different categories and time periods</p>
+                </div>
+            </a>
+            
+            <a href="{{ url_for('expenditure') }}" class="feature-card">
+                <div class="icon-wrapper">
+                    <i class="fas fa-receipt"></i>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">Manage Expenditures</h3>
+                    <p class="description">Track and categorize your expenses with detailed notes and receipt management</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="card-container">
+            <a href="{{ url_for('analysis') }}" class="feature-card analysis-card" style="grid-column: span 2;">
+                <div class="icon-wrapper">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="content-wrapper">
+                    <h3 class="title">View Analysis</h3>
+                    <p class="description">Visualize spending patterns and get personalized insights to improve your financial health</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

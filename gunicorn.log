@@ -1,0 +1,818 @@
+nohup: ignoring input
+[2025-02-28 11:02:52 +0530] [80025] [INFO] Starting gunicorn 23.0.0
+[2025-02-28 11:02:52 +0530] [80025] [INFO] Listening at: http://0.0.0.0:5511 (80025)
+[2025-02-28 11:02:52 +0530] [80025] [INFO] Using worker: sync
+[2025-02-28 11:02:52 +0530] [80026] [INFO] Booting worker with pid: 80026
+[2025-02-28 11:02:52 +0530] [80027] [INFO] Booting worker with pid: 80027
+[2025-02-28 11:02:52 +0530] [80028] [INFO] Booting worker with pid: 80028
+[2025-02-28 11:02:52 +0530] [80029] [INFO] Booting worker with pid: 80029
+[2025-02-28 11:04:28 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80028)
+[2025-02-28 11:04:28 +0530] [80028] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 11:04:28 +0530] [80028] [INFO] Worker exiting (pid: 80028)
+[2025-02-28 11:04:28 +0530] [80033] [INFO] Booting worker with pid: 80033
+[2025-02-28 11:06:13 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80033)
+[2025-02-28 11:06:13 +0530] [80033] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 11:06:13 +0530] [80033] [INFO] Worker exiting (pid: 80033)
+Fetching expenditures for year: 2025, cost_center: cc2
+Fetching expenditures for year: 2025, cost_center: cc4
+Fetching expenditures for year: 2025, cost_center: cc5
+Fetching expenditures for year: 2025, cost_center: cc2
+Fetching expenditures for year: 2025, cost_center: cc3
+[2025-02-28 11:06:13 +0530] [80039] [INFO] Booting worker with pid: 80039
+[2025-02-28 11:55:36 +0530] [80025] [INFO] Handling signal: hup
+--- Logging error ---
+[2025-02-28 11:55:36 +0530] [80025] [ERROR] Worker (pid:80026) was sent SIGHUP!
+[2025-02-28 11:55:36 +0530] [80025] [ERROR] Worker (pid:80029) was sent SIGHUP!
+[2025-02-28 11:55:36 +0530] [80025] [ERROR] Worker (pid:80039) was sent SIGHUP!
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 553, in reap_workers
+    self.log.error(msg)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/glogging.py", line 271, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1568, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1684, in _log
+    self.handle(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1700, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1762, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1028, in handle
+    self.emit(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1168, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1081, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/evt-tracker/Downloads/budget-app/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 222, in run
+    self.log.info("Handling signal: %s", signame)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/glogging.py", line 277, in info
+    self.error_log.info(msg, *args, **kwargs)
+Message: 'Handling signal: %s'
+Arguments: ('hup',)
+[2025-02-28 11:55:36 +0530] [80025] [INFO] Hang up: Master
+[2025-02-28 11:55:36 +0530] [80153] [INFO] Booting worker with pid: 80153
+[2025-02-28 11:55:36 +0530] [80154] [INFO] Booting worker with pid: 80154
+[2025-02-28 11:55:36 +0530] [80156] [INFO] Booting worker with pid: 80156
+[2025-02-28 11:55:36 +0530] [80155] [INFO] Booting worker with pid: 80155
+[2025-02-28 12:28:17 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80155)
+[2025-02-28 12:28:17 +0530] [80155] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 12:28:17 +0530] [80155] [INFO] Worker exiting (pid: 80155)
+[2025-02-28 12:28:17 +0530] [80286] [INFO] Booting worker with pid: 80286
+[2025-02-28 13:09:50 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80286)
+[2025-02-28 13:09:50 +0530] [80286] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 13:09:50 +0530] [80286] [INFO] Worker exiting (pid: 80286)
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 0 expenditures for category New Category
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 2 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 5 expenditures for category Other Operating Expenses
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 6 expenditures for category Other Operating Expenses
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 6 expenditures for category Other Operating Expenses
+[2025-02-28 13:09:50 +0530] [80354] [INFO] Booting worker with pid: 80354
+[2025-02-28 13:16:21 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80156)
+[2025-02-28 13:16:21 +0530] [80156] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 13:16:21 +0530] [80156] [INFO] Worker exiting (pid: 80156)
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 2 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 5 expenditures for category Other Operating Expenses
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 2 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 5 expenditures for category Other Operating Expenses
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 5 expenditures for category Other Operating Expenses
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 6 expenditures for category Other Operating Expenses
+[2025-02-28 13:16:21 +0530] [80364] [INFO] Booting worker with pid: 80364
+[2025-02-28 13:16:51 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80154)
+[2025-02-28 13:16:51 +0530] [80154] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 13:16:51 +0530] [80154] [INFO] Worker exiting (pid: 80154)
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 2 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 5 expenditures for category Other Operating Expenses
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 6 expenditures for category Other Operating Expenses
+[2025-02-28 13:16:51 +0530] [80365] [INFO] Booting worker with pid: 80365
+[2025-02-28 13:17:51 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80365)
+[2025-02-28 13:17:51 +0530] [80365] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 13:17:51 +0530] [80365] [INFO] Worker exiting (pid: 80365)
+[2025-02-28 13:17:51 +0530] [80376] [INFO] Booting worker with pid: 80376
+[2025-02-28 13:38:59 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80153)
+[2025-02-28 13:38:59 +0530] [80153] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 13:38:59 +0530] [80153] [INFO] Worker exiting (pid: 80153)
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 0 expenditures for category New Category
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 5 expenditures for category Other Operating Expenses
+[2025-02-28 13:38:59 +0530] [80426] [INFO] Booting worker with pid: 80426
+[2025-02-28 16:44:21 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80426)
+[2025-02-28 16:44:21 +0530] [80426] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 16:44:21 +0530] [80426] [INFO] Worker exiting (pid: 80426)
+[2025-02-28 16:44:21 +0530] [81303] [INFO] Booting worker with pid: 81303
+[2025-02-28 17:44:39 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80364)
+[2025-02-28 17:44:39 +0530] [80364] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-02-28 17:44:39 +0530] [80364] [INFO] Worker exiting (pid: 80364)
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 6 expenditures for category Other Operating Expenses
+[2025-02-28 17:44:39 +0530] [81417] [INFO] Booting worker with pid: 81417
+[2025-03-02 11:22:40 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:81417)
+[2025-03-02 11:22:40 +0530] [81417] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-03-02 11:22:40 +0530] [81417] [INFO] Worker exiting (pid: 81417)
+[2025-03-02 11:22:40 +0530] [88131] [INFO] Booting worker with pid: 88131
+[2025-03-02 19:06:02 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80354)
+[2025-03-02 19:06:02 +0530] [80354] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-03-02 19:06:02 +0530] [80354] [INFO] Worker exiting (pid: 80354)
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 6 expenditures for category Other Operating Expenses
+[2025-03-02 19:06:02 +0530] [89329] [INFO] Booting worker with pid: 89329
+[2025-03-02 19:07:02 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:81303)
+[2025-03-02 19:07:02 +0530] [81303] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/bud[2025-03-03 10:52:35 +0530] [75980] [INFO] Handling signal: hup
+[2025-03-03 10:52:35 +0530] [75980] [INFO] Hang up: Master
+[2025-03-03 10:52:35 +0530] [75980] [ERROR] Worker (pid:80034) was sent SIGHUP!
+[2025-03-03 10:52:35 +0530] [75980] [ERROR] Worker (pid:88132) was sent SIGHUP!
+[2025-03-03 10:52:35 +0530] [75980] [ERROR] Worker (pid:80031) was sent SIGHUP!
+[2025-03-03 10:52:35 +0530] [91824] [INFO] Booting worker with pid: 91824
+[2025-03-03 10:52:35 +0530] [75980] [ERROR] Worker (pid:80111) was sent SIGHUP!
+[2025-03-03 10:52:35 +0530] [91831] [INFO] Booting worker with pid: 91831
+[2025-03-03 10:52:35 +0530] [91834] [INFO] Booting worker with pid: 91834
+[2025-03-03 10:52:35 +0530] [91835] [INFO] Booting worker with pid: 91835
+[2025-03-03 10:52:35 +0530] [75980] [INFO] Handling signal: term
+[2025-03-03 10:52:36 +0530] [91835] [INFO] Worker exiting (pid: 91835)
+[2025-03-03 10:52:36 +0530] [91831] [INFO] Worker exiting (pid: 91831)
+[2025-03-03 10:52:36 +0530] [91834] [INFO] Worker exiting (pid: 91834)
+[2025-03-03 10:52:36 +0530] [91824] [INFO] Worker exiting (pid: 91824)
+[2025-03-03 10:52:36 +0530] [75980] [INFO] Shutting down: Master
+File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-03-02 19:12:02 +0530] [89329] [INFO] Worker exiting (pid: 89329)
+[2025-03-02 19:12:02 +0530] [89346] [INFO] Booting worker with pid: 89346
+[2025-03-02 19:22:03 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:80376)
+[2025-03-02 19:22:03 +0530] [80376] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-03-02 19:22:03 +0530] [80376] [INFO] Worker exiting (pid: 80376)
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 6 expenditures for category Other Operating Expenses
+[2025-03-02 19:22:03 +0530] [89366] [INFO] Booting worker with pid: 89366
+[2025-03-03 09:09:30 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:89366)
+[2025-03-03 09:09:30 +0530] [89366] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-03-03 09:09:30 +0530] [89366] [INFO] Worker exiting (pid: 89366)
+[2025-03-03 09:09:31 +0530] [91283] [INFO] Booting worker with pid: 91283
+[2025-03-03 09:09:42 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:89346)
+[2025-03-03 09:09:42 +0530] [89346] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-03-03 09:09:42 +0530] [89346] [INFO] Worker exiting (pid: 89346)
+[2025-03-03 09:09:42 +0530] [91284] [INFO] Booting worker with pid: 91284
+[2025-03-03 09:29:41 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:89330)
+[2025-03-03 09:29:41 +0530] [89330] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-03-03 09:29:41 +0530] [89330] [INFO] Worker exiting (pid: 89330)
+[2025-03-03 09:29:41 +0530] [91316] [INFO] Booting worker with pid: 91316
+[2025-03-03 10:26:47 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:88131)
+[2025-03-03 10:26:47 +0530] [88131] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-03-03 10:26:47 +0530] [88131] [INFO] Worker exiting (pid: 88131)
+[2025-03-03 10:26:47 +0530] [91422] [INFO] Booting worker with pid: 91422
+[2025-03-03 10:52:20 +0530] [80025] [CRITICAL] WORKER TIMEOUT (pid:91284)
+[2025-03-03 10:52:20 +0530] [91284] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-03-03 10:52:20 +0530] [91284] [INFO] Worker exiting (pid: 91284)
+Fetching expenditures for year: 2025, cost_center: cc1
+Found 2 expenditures for category Travel & Entertainment
+Found 1 expenditures for category Purchased Services
+Found 3 expenditures for category Project Materials & Product Supplies
+Found 2 expenditures for category IS Expenses
+Found 6 expenditures for category Other Operating Expenses
+[2025-03-03 10:52:20 +0530] [91795] [INFO] Booting worker with pid: 91795
+[2025-03-03 10:52:35 +0530] [80025] [INFO] Handling signal: hup
+[2025-03-03 10:52:35 +0530] [80025] [INFO] Hang up: Master
+[2025-03-03 10:52:35 +0530] [80025] [ERROR] Worker (pid:91283) was sent SIGHUP!
+[2025-03-03 10:52:35 +0530] [91821] [INFO] Booting worker with pid: 91821
+[2025-03-03 10:52:35 +0530] [80025] [INFO] Handling signal: term
+--- Logging error ---
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/logging/__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 241, in handle_chld
+    self.reap_workers()
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 553, in reap_workers
+    self.log.error(msg)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/glogging.py", line 271, in error
+    self.error_log.error(msg, *args, **kwargs)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1568, in error
+    self._log(ERROR, msg, args, **kwargs)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1684, in _log
+    self.handle(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1700, in handle
+    self.callHandlers(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1762, in callHandlers
+    hdlr.handle(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1028, in handle
+    self.emit(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1168, in emit
+    self.handleError(record)
+  File "/usr/lib/python3.12/logging/__init__.py", line 1081, in handleError
+    sys.stderr.write('--- Logging error ---\n')
+RuntimeError: reentrant call inside <_io.BufferedWriter name='<stderr>'>
+Call stack:
+  File "/home/evt-tracker/Downloads/budget-app/venv/bin/gunicorn", line 8, in <module>
+    sys.exit(run())
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/app/wsgiapp.py", line 66, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]", prog=prog).run()
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 235, in run
+    super().run()
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/app/base.py", line 71, in run
+    Arbiter(self).run()
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/arbiter.py", line 222, in run
+    self.log.info("Handling signal: %s", signame)
+  File "/home/evt-tracker/Downloads/budget-app/venv/lib/python3.12/site-packages/gunicorn/glogging.py", line 277, in info
+    self.error_log.info(msg, *args, **kwargs)
+Message: 'Handling signal: %s'
+Arguments: ('term',)
+[2025-03-03 10:52:35 +0530] [80025] [ERROR] Worker (pid:91795) was sent SIGHUP!
+[2025-03-03 10:52:35 +0530] [80025] [ERROR] Worker (pid:91422) was sent SIGHUP!
+[2025-03-03 10:52:35 +0530] [91819] [INFO] Booting worker with pid: 91819
+[2025-03-03 10:52:35 +0530] [91820] [INFO] Booting worker with pid: 91820
+[2025-03-03 10:52:35 +0530] [91818] [INFO] Booting worker with pid: 91818
+[2025-03-03 10:52:35 +0530] [91821] [INFO] Worker exiting (pid: 91821)
+[2025-03-03 10:53:05 +0530] [80025] [INFO] Shutting down: Master

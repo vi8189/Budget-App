@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Input with Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .budget-table th, .budget-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .budget-input {
+            width: 80px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        /* Floating description box */
+        .description-box {
+            position: absolute;
+            display: none;
+            width: 180px;
+            height: 30px;
+            padding: 5px;
+            font-size: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Budget Table</h2>
+        <table class="budget-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Jan</th>
+                    <th>Feb</th>
+                    <th>Mar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Marketing</td>
+                    <td><input type="number" name="jan" class="budget-input" data-description=""></td>
+                    <td><input type="number" name="feb" class="budget-input" data-description=""></td>
+                    <td><input type="number" name="mar" class="budget-input" data-description=""></td>
+                </tr>
+                <tr>
+                    <td>Development</td>
+                    <td><input type="number" name="jan" class="budget-input" data-description=""></td>
+                    <td><input type="number" name="feb" class="budget-input" data-description=""></td>
+                    <td><input type="number" name="mar" class="budget-input" data-description=""></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Description input box (Hidden initially) -->
+    <input type="text" id="description-box" class="description-box" placeholder="Enter description">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const descriptionBox = document.getElementById('description-box');
+            let activeInput = null;
+
+            // Show description box on hover
+            document.querySelectorAll('.budget-input').forEach(input => {
+                input.addEventListener('mouseenter', (event) => {
+                    const rect = event.target.getBoundingClientRect();
+                    
+                    descriptionBox.style.top = `${rect.top + window.scrollY + rect.height + 5}px`;
+                    descriptionBox.style.left = `${rect.left + window.scrollX}px`;
+                    descriptionBox.style.display = 'block';
+
+                    descriptionBox.value = event.target.dataset.description || ''; // Load existing description
+                    activeInput = event.target;
+                });
+            });
+
+            // Keep description box visible when hovered
+            descriptionBox.addEventListener('mouseenter', () => {
+                descriptionBox.style.display = 'block';
+            });
+
+            // Hide when both input and description box lose focus
+            descriptionBox.addEventListener('mouseleave', () => {
+                setTimeout(() => {
+                    if (document.activeElement !== descriptionBox && document.activeElement !== activeInput) {
+                        descriptionBox.style.display = 'none';
+                    }
+                }, 200);
+            });
+
+            // Save description when input is blurred
+            descriptionBox.addEventListener('blur', () => {
+                if (activeInput) {
+                    activeInput.dataset.description = descriptionBox.value; // Save description
+                }
+                descriptionBox.style.display = 'none';
+            });
+
+            // Save on Enter key
+            descriptionBox.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    descriptionBox.blur();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
